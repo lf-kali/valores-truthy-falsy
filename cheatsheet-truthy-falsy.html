@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Cheatsheet: Truthy/Falsy e Operadores TS</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f7f3f3; color: #333; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #3498db; padding-bottom: 10px;}
+        h2 { margin-top: 0; font-size: 1.5em; }
+        .box { padding: 15px; border-radius: 6px; margin-bottom: 15px; }
+        .falsy-box { background-color: #e74c3c; color: white; }
+        .operator-box { background-color: #3498db; color: white; }
+        ul { list-style: none; padding-left: 0; font-size: 1.1em; }
+        li { margin-bottom: 8px; font-family: monospace; background: rgba(0, 0, 0, 0.1); padding: 3px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Cheatsheet: Truthy/Falsy e Operadores em TypeScript</h1>
+        
+        <div class="box falsy-box">
+            <h2>❌ Valores Falsy (Os que resultam em <code>false</code>)</h2>
+            <ul>
+                <li><code>false</code></li>
+                <li><code>0</code>, <code>-0</code>, <code>0n</code> (BigInt zero)</li>
+                <li><code>""</code> (String vazia)</li>
+                <li><code>null</code></li>
+                <li><code>undefined</code></li>
+                <li><code>NaN</code></li>
+            </ul>
+        </div>
+
+        <div class="box operator-box">
+            <h2>✨ Operadores Úteis em TypeScript</h2>
+            
+            <h3>1. Operador OR Lógico (<code>||</code>)</h3>
+            <p>Retorna o **primeiro valor Truthy** que encontrar. Se todos forem Falsy, retorna o último.</p>
+            <div style="font-family: monospace; background: rgba(255, 255, 255, 0.8); color: #333; padding: 8px; border-radius: 4px; margin-top: 5px;">
+                <code>const a = 0 || 5; <span style="color: gray;">// a é 5 (0 é Falsy)</span></code><br>
+                <code>const b = 1 || 5; <span style="color: gray;">// b é 1 (1 é Truthy)</span></code>
+            </div>
+
+            <h3>2. Operador Coalescing Nulo (<code>??</code>)</h3>
+            <p>Retorna o valor da direita **apenas se** o valor da esquerda for <code>null</code> ou <code>undefined</code>. Útil para preservar valores Falsy válidos (como `0` ou `""`).</p>
+            <div style="font-family: monospace; background: rgba(255, 255, 255, 0.8); color: #333; padding: 8px; border-radius: 4px; margin-top: 5px;">
+                <code>const a = 0 ?? 5; <span style="color: gray;">// a é 0 (0 não é null/undefined)</span></code><br>
+                <code>const b = null ?? 5; <span style="color: gray;">// b é 5</span></code>
+            </div>
+
+            <h3>3. Duplo NOT (<code>!!</code>)</h3>
+            <p>Força a conversão de qualquer valor para o seu booleano explícito (<code>true</code> ou <code>false</code>).</p>
+            <div style="font-family: monospace; background: rgba(255, 255, 255, 0.8); color: #333; padding: 8px; border-radius: 4px; margin-top: 5px;">
+                <code>const a = !!"olá"; <span style="color: gray;">// a é true</span></code><br>
+                <code>const b = !!0; <span style="color: gray;">// b é false</span></code>
+            </div>
+        </div>
+        <p style="margin-top: 20px; text-align: center; font-size: 0.9em;">**Nota:** Use <code>if (valor)</code> com cautela. Ele é ótimo para verificar <code>null</code>/<code>undefined</code>, mas filterá <code>0</code> e <code>""</code>. Use <code>??</code> se quiser preservar <code>0</code> ou <code>""</code>!</p>
+    </div>
+</body>
+</html>
