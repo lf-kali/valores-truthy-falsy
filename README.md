@@ -15,9 +15,9 @@ Para um aprendizado mais dinâmico, assista a estes vídeos que complementam o m
 
 O que são valores truthy e falsy | JavaScript: Uma explicação fundamental sobre os conceitos em JavaScript.
 
-<a href="./resumo-truthy-falsy.html">01 - Valores `truthy` e `falsy` - resumo</a>
+<a href="./resumo-truthy-falsy.md">01 - Valores `truthy` e `falsy` - resumo</a>
 
-<a href="./cheatsheet-truthy-falsy.html">02 - Cheatsheet `truthy` e `falsy`</a>
+<a href="./cheatsheet-truthy-falsy.md">02 - Cheatsheet `truthy` e `falsy`</a>
 
 <div style = "background-color: #6720b3ff; padding:; "><p style= "color: #c2c2c2ff; font-weight: bolder;">Tutorial<p></div>
 <a href="https://www.youtube.com/watch?v=vFgdQQYziMk" target = "_blank">[Aprenda com o VSCode] TypeScript para Iniciantes #9 `truthy` e `falsy` no TypeScript</a>
